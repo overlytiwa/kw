@@ -24,5 +24,7 @@
 @media(max-width:800px){.about-heading{font-size:14.5vw}}
 
 
+/* Only the collection handles swipes itself; album pages use native touch scrolling. */
+body[data-view=home]{touch-action:none}
 /* Official Lucide SVG icons, served with the archive. */
 .icon{display:inline-block;width:1em;height:1em;vertical-align:-.15em;flex-shrink:0}.collection-position button{display:inline-flex;align-items:center;justify-content:center}.collection-position .icon{width:17px;height:17px}.text-action .icon{width:.8em;height:.8em;margin-left:.15em;vertical-align:-.09em}.stage-plus .icon{width:22px;height:22px;vertical-align:middle}#cursor-label .icon{width:11px;height:11px;vertical-align:-2px;margin-left:3px}

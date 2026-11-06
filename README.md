@@ -31,6 +31,8 @@ Open http://localhost:5173 in a modern browser. The site uses JavaScript modules
 
 Reduced-motion preferences, keyboard focus, touch navigation, and a WebGL fallback are supported.
 
+On touch devices, album and About pages keep the browser's native scrolling and momentum. Touch listeners are passive, disc hit targets move through transforms, and the disc follows the page directly while its rotation remains animated. Desktop wheel smoothing and the transition into the next album are preserved.
+
 The scene renders on demand and stops GPU drawing while idle. Lightweight, single-pass disc materials retain the supplied model geometry and label textures, with darker studio lighting and soft shading across each face. Mobile render resolution is capped to limit GPU work.
 
 Carousel movement uses a damped spring with a bounded speed. Models are prefetched beyond the current viewport, glide and fade in when they arrive, and leave gradually at the screen edges. Opening an album also gives the neighboring discs a brief exit animation. The viewport determines visibility, so wider windows do not cut off visible discs.

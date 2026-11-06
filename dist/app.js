@@ -107,6 +107,7 @@ function route(){
 }
 window.addEventListener('hashchange',route);window.addEventListener('popstate',()=>{if(!location.hash)route();});
 window.addEventListener('pointermove',e=>{
+ if(coarse||e.pointerType==='touch')return;
  pointer.x=e.clientX/innerWidth*2-1;pointer.y=e.clientY/innerHeight*2-1;
  const overUI=e.target.closest('nav,.collection-bottom,.stage-caption,.next-open,.album-caption,.home-stats');
  hovered=coarse||overUI?-1:scene?scene.pick(e.clientX,e.clientY):Number(e.target.closest('.disc-hit')?.dataset.index??-1);
@@ -126,6 +127,7 @@ window.addEventListener('pointerout',e=>{if(!e.relatedTarget){pointer.x=pointer.
 window.addEventListener('click',e=>{if(!e.target.closest('a,button')){const hit=scene?.pick(e.clientX,e.clientY)??-1;if(hit>=0)discClick(hit);}});
 window.addEventListener('wheel',e=>{
  if(e.ctrlKey)return;
+ if(coarse&&view!=='home')return;
  const delta=(Math.abs(e.deltaX)>Math.abs(e.deltaY)?e.deltaX:e.deltaY)*(e.deltaMode===1?18:e.deltaMode===2?innerHeight:1);
  if(view==='home'){
   e.preventDefault();target=clamp(target+delta*.0021,0,16);scene?.loadNearby(Math.round(target));
@@ -144,8 +146,8 @@ window.addEventListener('wheel',e=>{
 let touchStart=null;
 window.addEventListener('touchstart',e=>{touchStart={x:e.touches[0].clientX,y:e.touches[0].clientY,pos:target,scroll:window.scrollY};},{passive:true});
 window.addEventListener('touchmove',e=>{
- if(view==='home'&&touchStart){e.preventDefault();const dx=touchStart.x-e.touches[0].clientX,dy=touchStart.y-e.touches[0].clientY;target=clamp(touchStart.pos+(Math.abs(dx)>Math.abs(dy)?dx:dy)/(innerWidth*.55),0,16);}
-},{passive:false});
+ if(view==='home'&&touchStart){const dx=touchStart.x-e.touches[0].clientX,dy=touchStart.y-e.touches[0].clientY;target=clamp(touchStart.pos+(Math.abs(dx)>Math.abs(dy)?dx:dy)/(innerWidth*.55),0,16);}
+},{passive:true});
 window.addEventListener('touchend',e=>{
  if(view==='home')target=Math.round(target);
  else if(view==='album'&&touchStart){
@@ -163,6 +165,11 @@ window.addEventListener('keydown',e=>{
   if(e.key==='Enter'&&document.activeElement===document.body){e.preventDefault();openAlbum(selected);}
  }else if(e.key==='Escape'){location.hash='';}
  else if(['PageDown','PageUp','Home','End'].includes(e.key)||(e.key===' '&&tag!=='BUTTON'&&tag!=='A')){
+  if(coarse){
+   const max=document.documentElement.scrollHeight-innerHeight;
+   if(view==='album'&&window.scrollY>max-10&&['PageDown',' '].includes(e.key)){e.preventDefault();openAlbum((selected+1)%17,true);}
+   return;
+  }
   e.preventDefault();const max=document.documentElement.scrollHeight-innerHeight;
   if(view==='album'&&window.scrollY>max-10&&['PageDown',' '].includes(e.key))openAlbum((selected+1)%17,true);
   else smoothTarget=clamp(e.key==='Home'?0:e.key==='End'?max:smoothTarget+(['PageUp'].includes(e.key)||e.shiftKey?-1:1)*innerHeight*.85,0,max);
@@ -349,7 +356,7 @@ class DiscScene {
   const visible=!!g.userData.loaded&&alpha>.001;if(g.visible!==visible){g.visible=visible;this.changed=true;}
   const values={x,y,z,scale,rx,ry,rz},t=reduced||!s.initialized?1:1-Math.exp(-dt*14);
   for(const key of Object.keys(values)){
-   const direct=home&&this.time-(this.homeEnteredAt??0)>650&&['x','y','z','scale'].includes(key);
+   const direct=['x','y','z','scale'].includes(key)&&((home&&this.time-(this.homeEnteredAt??0)>650)||(coarse&&view==='album'&&!changing));
    let next=direct?values[key]:lerp(s[key],values[key],t);
    if(Math.abs(values[key]-next)<.00015)next=values[key];
    if(Math.abs(next-s[key])>.000001)this.changed=true;
@@ -358,7 +365,11 @@ class DiscScene {
   s.initialized=true;g.position.set(s.x,s.y,s.z);g.rotation.set(s.rx,s.ry,s.rz);g.scale.setScalar(s.scale);g.updateMatrixWorld();
   const px=(s.x/this.worldWidth+.5)*this.width,py=(.5-s.y/this.worldHeight)*this.height;
   const size=s.scale*2/this.worldHeight*this.height,b=buttons[i];
-  styleIfChanged(b,'display',visible&&alpha>.2?'block':'none');styleIfChanged(b,'left',`${px.toFixed(2)}px`);styleIfChanged(b,'top',`${py.toFixed(2)}px`);
+  styleIfChanged(b,'display',visible&&alpha>.2?'block':'none');
+  if(coarse){
+   styleIfChanged(b,'left','0px');styleIfChanged(b,'top','0px');
+   styleIfChanged(b,'transform',`translate3d(${px.toFixed(2)}px,${py.toFixed(2)}px,0) translate(-50%,-50%)`);
+  }else{styleIfChanged(b,'left',`${px.toFixed(2)}px`);styleIfChanged(b,'top',`${py.toFixed(2)}px`);}
   styleIfChanged(b,'width',`${(size*.86).toFixed(2)}px`);styleIfChanged(b,'height',`${(size*.86).toFixed(2)}px`);
   styleIfChanged(b,'zIndex',i===selected?'8':'5');
   const tabIndex=visible&&py>-size*.5&&py<this.height+size*.5&&px>-size*.5&&px<this.width+size*.5?0:-1;
@@ -382,7 +393,7 @@ class DiscScene {
    }
    this.lastView=view;
    this.lastRoute=routeVersion;this.dirty=true;
-   this.stageEl=$('.record-disc-stage');this.nextEl=$('.next-record');this.artEl=$('.artwork-section');this.progressEl=$('.next-progress');
+   this.stageEl=$('.record-disc-stage');this.nextEl=$('.next-record');this.artEl=$('.artwork-section');this.progressEl=$('.next-progress');this.prefetchedNext=null;
   }
   if(view==='about')return false;
   if(view==='home'){
@@ -406,7 +417,7 @@ class DiscScene {
     this.place(selected,c.x,c.y,scale,.13+h.y*.16,-.35+h.x*.23+flipNow,-.13+window.scrollY*.00012,dt);
    }
    if(next.top<this.height+100&&next.bottom>0){
-    const n=(selected+1)%17;this.loadNearby(n);const h=this.hover(n);
+    const n=(selected+1)%17;if(this.prefetchedNext!==n){this.prefetchedNext=n;this.loadNearby(n);}const h=this.hover(n);
     const c=this.toWorld(this.width*.5,next.top+next.height*.58),scale=Math.min(this.height*.265,this.width*.34)/factor;
     this.place(n,c.x,c.y,scale,.18+h.y*.12,-.4+h.x*.2,-.18,dt);
     if(this.progressEl)styleIfChanged(this.progressEl,'transform',`scaleX(${clamp(1-next.top/this.height,0,1).toFixed(4)})`);
@@ -497,7 +508,9 @@ function animate(time){
  }else{
   const y=window.scrollY;
   if(Math.abs(y-lastWritten)>3)smoothTarget=y;
-  if(!touchStart){
+  // Touch scrolling and its momentum belong to the browser. Writing scrollTo
+  // here pulls small native scroll steps back toward the previous frame.
+  if(!coarse&&!touchStart){
    const max=Math.max(0,document.documentElement.scrollHeight-innerHeight);smoothTarget=clamp(smoothTarget,0,max);
    const next=reduced?smoothTarget:lerp(y,smoothTarget,1-Math.exp(-dt*12));
    if(Math.abs(next-y)>.25){window.scrollTo(0,next);lastWritten=window.scrollY;moving=true;}else lastWritten=y;
