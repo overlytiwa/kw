@@ -1,0 +1,206 @@
+[
+  {
+    "source": "01_the_college_dropout.glb",
+    "optimized": "01_the_college_dropout.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:01:c4b2af664a605bbc45c36c50dffebe9b0f44155dd4e968f33ad02c1e3d4606b5",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "02_late_registration.glb",
+    "optimized": "02_late_registration.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:02:3ed5adda0e0948949aab4c5ef9c917123aa9bedb464354faa3204af56c3c6ddf",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "03_graduation.glb",
+    "optimized": "03_graduation.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:03:80997bcd935924f5999be22fa6eabcce40edb28121067126bc703a7a51d3ac9f",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "04_808s_heartbreak.glb",
+    "optimized": "04_808s_heartbreak.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:04:b024d0cfcffb208010c018854c728f7929a74799295439370a1fe1b896a4230a",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "05_my_beautiful_dark_twisted_fantasy.glb",
+    "optimized": "05_my_beautiful_dark_twisted_fantasy.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:05:aa21dd27ee1fe94b4d490215f993e0f031e8bad6fb6f8a456e38ad626753668b",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "06_watch_the_throne.glb",
+    "optimized": "06_watch_the_throne.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:06:b1ea6051f68452a51d83e5ea2d4244c3613c1b4f43195019baf12b4ec214d1fc",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "07_cruel_summer.glb",
+    "optimized": "07_cruel_summer.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:07:658678f62895d8696b52f555ff1e3aa56209951cc87bd4ef55650537c9462083",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "08_yeezus.glb",
+    "optimized": "08_yeezus.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:08:1f7e4ac93564192830b0d6b293445e89be84c7cbbb6bb7e8c3396b617f748bb4",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "09_the_life_of_pablo.glb",
+    "optimized": "09_the_life_of_pablo.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:09:4b98709c23463a45a0e88e968efa82b48abd74f04807ed69c16af4dfc986904f",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "10_ye.glb",
+    "optimized": "10_ye.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:10:4069e961c59b0a90e551306eaa3c1fb3c87488adad5ecb561b71910001a23b36",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "11_kids_see_ghosts.glb",
+    "optimized": "11_kids_see_ghosts.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:11:af5e4a038ececcdbb895355159b0b0734f30cb30ae01c52a841dd8cb0fc65923",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "12_jesus_is_king.glb",
+    "optimized": "12_jesus_is_king.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:12:b19ba35d7a185f50521b4db4b48a11ff3e184e05dac1d1652accebaa77c6761d",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "13_donda.glb",
+    "optimized": "13_donda.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:13:ecc7a231838b381f7c029c0253661f4a910b7f185fcc290d8359e1c3682ebc57",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "14_donda_2.glb",
+    "optimized": "14_donda_2.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:14:4805c2115df9f3b49eab736a3e5ef0755aefa05dcbd11fa6b42478c47b25ec58",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "15_vultures_1.glb",
+    "optimized": "15_vultures_1.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:15:f278835ed70099c4843feffb9b748113bd8fc0582563a6e8d8c2575bad69a6e2",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "16_vultures_2.glb",
+    "optimized": "16_vultures_2.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:16:04d1752160241d21ea55aeb2054b191fa9a1603ba6da27bad2ff1cb2ab6175cb",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  },
+  {
+    "source": "17_bully.glb",
+    "optimized": "17_bully.gltf",
+    "geometry": "c78b8afec93f1dcb6bb2f24108afb4809b5643d32b46fb9ec1776cdf509615bb",
+    "images": [
+      "shared:35b827f8e8f9db7557c392f535c5f801dc9e3e68a975ddc96ec5bc40ea2196e5",
+      "shared:f02d26a773d3480dd5f9097344f07d9b650c928c14ca897c839618a65bf5f65f",
+      "shared:84b5184c7d9a0dea70a4c75796922ea81d19b72a1c7fb8051db2da22616603ba",
+      "album:17:fb55141be6d94b531bd52ea7cd78b8020e4ff2cb0066bd70b20e089244fc32bd",
+      "shared:37d00fa97d98c25dabc18d31fda415aab3d7adc9c24806b10af3b07b8cc9749d"
+    ]
+  }
+]

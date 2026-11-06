@@ -1,0 +1,10 @@
+.openai/
+.sites-*/
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+.DS_Store
+work/
+outputs/
