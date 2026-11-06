@@ -57,6 +57,7 @@ The album information and commercial figures were supplied by the client. Spotif
 ## Credits and licences
 
 - Design reference: https://a24.raviklaassens.com/ by Ravi Klaassens. This project is a separately implemented Kanye West adaptation.
+- Interface and favicon icons: [Lucide](https://lucide.dev/), self-hosted SVGs. Original files, pinned source links, and the full upstream licence are included in `dist/assets/icons/`.
 - Three.js r170: MIT. Licence included in `dist/assets/vendor/LICENSE-three.txt`.
 - Cormorant Garamond: SIL Open Font License. Licence included in `dist/assets/fonts/OFL.txt`.
 - Album artwork and disc models: supplied for this project. The concept labels are not replicas of officially manufactured physical CD labels.
