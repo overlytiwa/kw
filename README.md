@@ -2,6 +2,12 @@
 
 A self-contained, static website using all seventeen original GLB compact-disc models supplied for this project. The models remain in their original release order. No AI-generated imagery is used.
 
+## Deploy to Vercel
+
+Import this repository and leave Root Directory at the repository root. The included `vercel.json` selects the Other framework preset, skips installation and building, and publishes the existing `dist` folder. No dependencies or environment variables are required.
+
+The homepage, About view, and album views use hash-based navigation, so they work directly and on refresh without server rewrites. If a deployment shows a 404 at `/` while `/dist/index.html` loads, redeploy the latest commit containing `vercel.json`.
+
 ## Preview locally
 
 Serve the `dist` folder with any static web server. For example, with Python installed:
